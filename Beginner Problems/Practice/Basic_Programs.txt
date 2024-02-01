@@ -1,0 +1,282 @@
+1.Write a c program to find the greatest of two numbers -----------------------------------------------------
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int findGreatest(int num1,int num2){
+    int ans;
+    if(num1>num2){
+        ans=num1;
+    }else{
+        ans=num2;
+    }
+    return ans;
+}
+int main() {
+//program to find the greatest of two numbers
+int num1;
+int num2;
+printf("Enter number-1:");
+scanf("%d",&num1);
+printf("Enter number-2:");
+scanf("%d",&num2);
+int res = findGreatest(num1,num2);
+printf("The greatest of two numbers is %d",res);
+    return 0;
+}
+
+
+2.Write a c program to find the Smallest of two numbers---------------------------------------
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int findSmallest(int num1,int num2){
+    int ans;
+    if(num1<num2){
+        ans=num1;
+    }else{
+        ans=num2;
+    }
+    return ans;
+}
+int main() {
+//program to find the greatest of two numbers
+int num1;
+int num2;
+printf("Enter number-1:");
+scanf("%d",&num1);
+printf("Enter number-2:");
+scanf("%d",&num2);
+int res = findSmallest(num1,num2);
+printf("The Smallest of two numbers is %d",res);
+    return 0;
+}
+
+
+3.Write a c program to determine whether the given number is odd or even-------------
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   
+   int num;
+   printf("Enter a number:");
+   scanf("%d",&num);
+   if(num %2==0){
+       printf("It is an even number");
+   }else{
+       printf("It is an odd number");
+   }
+
+    return 0;
+}
+
+
+4.Write a c program to check whether the given number is an armstrong number or not -------
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   
+   int num;
+   printf("Enter a number:");
+   scanf("%d",&num);
+   int temp1 = num;
+   int temp2 = num;
+   //determine the number of digits
+   int count;
+   while(num>0){
+       num/=10;
+       count++;
+   }
+   //do the calculation
+    int rem;
+    int sum=0;
+   while(temp1>0){
+      rem = temp1%10;
+      sum+=pow(rem,count);
+      temp1/=10;
+   }
+   //check for armstrong number
+   if(temp2==sum){
+       printf("It is an armstrong number");
+   }else{
+       printf("It is not an armstrong number");
+   }
+    return 0;
+}
+
+
+5.Write a program to check whether the given number is positive, negative or zero--------
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void determine(int num){
+    if(num<0){
+        printf("It is a negative number");
+    }else if(num>0){
+        printf("It is a positive number");
+    }else{
+        printf("The number is Zero");
+    }
+}
+
+int main() {
+    //program to check whether a number is positive ,negative or zero 
+    int num;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    determine(num);
+    return 0;
+}
+
+6.Write a c program to perform arithmetic operations between two numbers-----------
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    //program to performarithmetic operations between two numbers
+    
+    int number1;
+    int number2;
+    printf("Enter number-1:");
+    scanf("%d",&number1);
+     printf("Enter number-2:");
+    scanf("%d",&number2);
+    printf("Addition :%d",number1+number2);
+    printf("\n Subtraction :%d",number1-number2);
+    printf("\n Multiplication :%d",number1*number2);
+      if(number2!=0){
+          float quotient = number1/number2;
+    printf("\n Division :%f",quotient);
+      }else{
+          printf("\n Divison cannot be done by zero... please enter a non-zero value");
+      }
+
+    return 0;
+}
+
+7.Write a C program to find the sum of n natural numbers-----------------------------
+
+Approach 1:
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the value of n :");
+    scanf("%d",&n);
+    int ans = (n*(n+1))/2;
+    printf("The sum of natural numbers upto %d is %d ", n ,ans);
+
+    return 0;
+}
+
+Approach 2 :
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the value of n :");
+    scanf("%d",&n);
+    int ans = 0;
+    for(int i=1;i<n+1;i++){
+        ans+=i;
+    }
+    printf("The sum of natural numbers upto %d is %d ", n ,ans);
+
+    return 0;
+}
+
+8.Write a C program to find the sum of n natural even numbers-----------------------------
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the value of n :");
+    scanf("%d",&n);
+    int ans = 0;
+    for(int i=1;i<n+1;i++){
+        if(i%2==0){
+        ans+=i;
+        }
+    }
+    printf("The sum of n natural even numbers upto %d is %d ", n ,ans);
+
+    return 0;
+}
+
+9.Write a c program to determine the sum of n natural odd numbers-------------------
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the value of n :");
+    scanf("%d",&n);
+    int ans = 0;
+    for(int i=1;i<n+1;i++){
+        if(i%2!=0){
+        ans+=i;
+        }
+    }
+    printf("The sum of natural odd numbers upto %d is %d ", n ,ans);
+
+    return 0;
+}
+
+10.Write a c program to find the sum of squares of n natural numbers--------------
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the value of n :");
+    scanf("%d",&n);
+    int ans = 0;
+    for(int i=1;i<n+1;i++){
+        ans+=i*i;
+    }
+    printf("The sum of natural odd numbers upto %d is %d ", n ,ans);
+
+    return 0;
+}
+
+11.Write a c program to determine whether the given number is a prime number or not --------------------
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+void evaluate (int num){
+    for (int i=2;i*i<num+1;i++){
+        if(num % i==0){
+            printf("It is a Composite number");
+            return;
+        }
+    }
+     printf("It is a Prime number");
+    
+}
+int main() {
+   //program to determine whether the given number is prime or composite
+   int num;
+   printf("Enter the number:");
+   scanf("%d",&num);
+    evaluate(num);
+    return 0;
+}
